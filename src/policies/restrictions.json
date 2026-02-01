@@ -1,0 +1,194 @@
+{
+  "version": "1.0.0",
+  "name": "Winsurf AI System Restrictions",
+  "description": "System-level restrictions and limitations for Winsurf AI ecosystem",
+  "restrictions": {
+    "execution": {
+      "script_execution": {
+        "allowed": false,
+        "blocked_extensions": [
+          "ps1", "bat", "cmd", "js", "vbs", "wsf", "jar", "py", "pl", "rb", "sh", "bash", "zsh", "php", "asp", "aspx", "jsp"
+        ],
+        "blocked_interpreters": [
+          "powershell.exe",
+          "cmd.exe",
+          "wscript.exe",
+          "cscript.exe",
+          "python.exe",
+          "pythonw.exe",
+          "perl.exe",
+          "ruby.exe",
+          "java.exe",
+          "javaw.exe"
+        ]
+      },
+      "dll_loading": {
+        "unsigned_allowed": false,
+        "require_signature": true,
+        "blocked_patterns": [
+          "*hook*",
+          "*inject*",
+          "*patch*",
+          "*crack*",
+          "*keygen*"
+        ],
+        "trusted_signers": [
+          "Microsoft Corporation",
+          "Winsurf AI Technologies",
+          "Windows Hardware Compatibility Publisher"
+        ]
+      },
+      "external_executables": {
+        "whitelist_only": true,
+        "allowed_executables": [
+          "SecureCore.exe",
+          "WinsurfUI.exe",
+          "SecureCore.dll"
+        ],
+        "blocked_patterns": [
+          "*installer*",
+          "*setup*",
+          "*patch*",
+          "*crack*",
+          "*keygen*",
+          "*hack*",
+          "*cheat*"
+        ]
+      }
+    },
+    "file_system": {
+      "protected_directories": [
+        "C:\\Windows\\System32\\",
+        "C:\\Windows\\SysWOW64\\",
+        "C:\\Program Files\\Winsurf AI\\",
+        "C:\\Program Files\\Common Files\\Winsurf AI\\",
+        "C:\\ProgramData\\Winsurf AI\\"
+      ],
+      "blocked_directories": [
+        "C:\\Windows\\Temp\\",
+        "C:\\Temp\\",
+        "%TEMP%\\",
+        "%TMP%\\",
+        "C:\\Users\\*\\AppData\\Local\\Temp\\",
+        "C:\\Users\\*\\AppData\\Local\\Microsoft\\Windows\\INetCache\\",
+        "C:\\Users\\*\\AppData\\Roaming\\Microsoft\\Windows\\Recent\\"
+      ],
+      "file_size_limits": {
+        "max_executable_size": 104857600,
+        "max_dll_size": 52428800,
+        "max_script_size": 0,
+        "max_archive_size": 524288000
+      },
+      "file_creation_restrictions": {
+        "blocked_extensions": [
+          "ps1", "bat", "cmd", "js", "vbs", "wsf", "jar", "py", "pl", "rb"
+        ],
+        "require_scan": true,
+        "quarantine_suspicious": true
+      }
+    },
+    "registry": {
+      "protected_keys": [
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Winsurf AI\\",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\SecureCore\\",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\"
+      ],
+      "blocked_keys": [
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\"
+      ],
+      "modification_restrictions": {
+        "require_admin": true,
+        "log_all_changes": true,
+        "block_suspicious_changes": true
+      }
+    },
+    "network": {
+      "blocked_protocols": [
+        "HTTP",
+        "FTP",
+        "Telnet",
+        "SMTP",
+        "POP3"
+      ],
+      "allowed_protocols": [
+        "HTTPS",
+        "DNS"
+      ],
+      "blocked_domains": [
+        "*malware*",
+        "*phishing*",
+        "*torrent*",
+        "*warez*",
+        "*crack*"
+      ],
+      "port_restrictions": {
+        "blocked_ports": [21, 23, 25, 80, 110, 143, 993, 995],
+        "allowed_ports": [443, 53]
+      }
+    },
+    "process": {
+      "protection": {
+        "prevent_termination": true,
+        "prevent_suspension": true,
+        "prevent_debugging": true,
+        "prevent_injection": true
+      },
+      "creation_restrictions": {
+        "blocked_processes": [
+          "taskmgr.exe",
+          "procexp.exe",
+          "processhacker.exe",
+          "x64dbg.exe",
+          "ollydbg.exe",
+          "ida.exe",
+          "ida64.exe"
+        ],
+        "require_whitelist": false
+      }
+    },
+    "memory": {
+      "protection": {
+        "dep_enabled": true,
+        "aslr_enabled": true,
+        "cfg_enabled": true,
+        "prevent_execution_from_data": true
+      },
+      "allocation_restrictions": {
+        "max_allocation_size": 1073741824,
+        "require_executable_protection": true
+      }
+    }
+  },
+  "user_interface": {
+    "restrictions": {
+      "disable_task_manager": false,
+      "disable_registry_editor": false,
+      "disable_command_prompt": true,
+      "disable_powershell": true,
+      "disable_system_restore": false
+    }
+  },
+  "logging": {
+    "enabled": true,
+    "log_level": "INFO",
+    "max_log_size": 104857600,
+    "log_retention_days": 30,
+    "log_events": [
+      "policy_violations",
+      "blocked_operations",
+      "system_changes",
+      "security_events"
+    ]
+  },
+  "enforcement": {
+    "strict_mode": true,
+    "zero_tolerance": true,
+    "immediate_blocking": true,
+    "no_user_override": true,
+    "automatic_quarantine": true
+  }
+}
