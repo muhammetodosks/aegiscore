@@ -1,0 +1,106 @@
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+[Bb]in/
+[Oo]bj/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NuGet
+*.nupkg
+*.snupkg
+
+# Visual Studio cache files
+*.ncb
+*.aps
+*.cachefile
+*.ilk
+*.meta
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp_proj
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Strong naming key file
+*.snk
+
+# Profiler output files
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# TeamCity
+_TeamCity*
+
+# DotCover
+*.dotCover
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+
+# AxoCover
+.axoCover/
+
+# Coverlet
+coverage*.json
+
+# Visual Studio code coverage results
+*.coverage
+*.coveragexml
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac
+.DS_Store
+
+# Large files
+*.ipch
+*.pdb
+*.ipch
+*.tlog/
+*.log
+*.recipe
+*.iobj
+*.ipdb
+*.tlog/
