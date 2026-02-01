@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React Media - Advanced Windows Security System
 
 **React Media** is a cutting-edge Windows security system that provides comprehensive protection through system-level monitoring and policy enforcement. This advanced security solution operates at the core of Windows to ensure maximum protection against modern threats.
@@ -453,3 +454,6 @@ By installing React Media, you acknowledge and accept:
 ---
 
 **⚠️ FINAL REMINDER:** This is advanced security software that operates at system level. Ensure you understand the implications and have administrator privileges before installation. Always keep the cleanup script handy for safe removal.
+=======
+# aegiscore
+>>>>>>> 530b73e5ed89c7b6e074a2a1e86d2c2fa310618e
